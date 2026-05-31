@@ -63,10 +63,10 @@ const MEMORIES: PolaroidItem[] = [
   },
   {
     id: 7,
-    src: "/images/cousin.png",
+    src: "/images/cousin.jpg",
     caption: "Cousins Gang",
-    date: " ",
-    story: " ",
+    date: "No idea :p",
+    story: "You guys were playing uno together, oh and I heard you shout XD. I could not find anything of you guys together and I really wanted to have a picture of you and your cousins together",
     tilt: "-2deg",
   },
   {
