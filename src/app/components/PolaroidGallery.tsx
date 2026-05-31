@@ -87,6 +87,8 @@ const MEMORIES: PolaroidItem[] = [
   }
 ];
 
+const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+
 export default function PolaroidGallery() {
   const [activePhoto, setActivePhoto] = useState<PolaroidItem | null>(null);
   const [heartsCount, setHeartsCount] = useState<Record<number, number>>({ 1: 5, 2: 12, 3: 8, 4: 15, 5: 1, 6: 8, 7: 12, 8: 24, 9: 10 });
@@ -286,7 +288,7 @@ export default function PolaroidGallery() {
               }}
             >
               <Image
-                src={photo.src}
+                src={`${basePath}${photo.src}`}
                 alt={photo.caption}
                 fill
                 sizes="240px"
@@ -424,7 +426,7 @@ export default function PolaroidGallery() {
                 }}
               >
                 <Image
-                  src={activePhoto.src}
+                  src={`${basePath}${activePhoto.src}`}
                   alt={activePhoto.caption}
                   fill
                   sizes="(max-width: 768px) 100vw, 350px"
