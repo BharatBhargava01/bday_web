@@ -1,19 +1,24 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-// Replace with your repository name if different
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
 const repoName = 'bday_web'; 
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Only statically export the site when building on GitHub Actions for Pages
+  output: isGithubActions ? 'export' : undefined,
+  
+  // Disable image optimization on GitHub Pages since it has no server
   images: {
-    unoptimized: true,
+    unoptimized: isGithubActions ? true : undefined,
   },
-  // Set basePath only in production (when building for GitHub Pages project page)
-  basePath: isProd ? `/${repoName}` : '',
+  
+  // Set basePath only on GitHub Pages where the site is served under /repoName
+  basePath: isGithubActions ? `/${repoName}` : '',
+  
   env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : '',
+    NEXT_PUBLIC_BASE_PATH: isGithubActions ? `/${repoName}` : '',
   },
+  
   allowedDevOrigins: ['10.0.73.128'],
 };
 
