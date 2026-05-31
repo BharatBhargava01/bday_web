@@ -41,7 +41,7 @@ const TRIBUTES: TributeVideo[] = [
   },
 ];
 
-const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function VideoCinema() {
   const [activeVideo, setActiveVideo] = useState<TributeVideo>(TRIBUTES[0]);

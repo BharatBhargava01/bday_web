@@ -87,7 +87,7 @@ const MEMORIES: PolaroidItem[] = [
   }
 ];
 
-const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function PolaroidGallery() {
   const [activePhoto, setActivePhoto] = useState<PolaroidItem | null>(null);

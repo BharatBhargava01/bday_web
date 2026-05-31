@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
   },
   // Set basePath only in production (when building for GitHub Pages project page)
   basePath: isProd ? `/${repoName}` : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : '',
+  },
   allowedDevOrigins: ['10.0.73.128'],
 };
 
