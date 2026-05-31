@@ -111,6 +111,19 @@ export default function Home() {
             {/* 3. Polaroid picture deck gallery */}
             <PolaroidGallery />
 
+            <h3
+                className="handwritten"
+                style={{
+                  fontSize: "34px",
+                  color: "var(--primary-gold)",
+                  marginBottom: "8px",
+                  textShadow: "0 0 15px rgba(212,175,55,0.25)",
+                }}
+              >
+                 And so many more memories that I couldn't fit here....
+              </h3>
+              
+
             {/* Divider line style */}
             <div
               style={{
@@ -142,7 +155,7 @@ export default function Home() {
                   textShadow: "0 0 15px rgba(212,175,55,0.25)",
                 }}
               >
-                Mischief Managed! ⚡🧙‍♂️
+                HAPPY BIRTHDAY ANISHAAA!!! ⚡🧙‍♂️
               </h3>
               <p
                 style={{
@@ -152,7 +165,7 @@ export default function Home() {
                   letterSpacing: "0.03em",
                 }}
               >
-                Made with warm butterbeer, countless wizarding wishes, and a little spark of genuine wand magic. Enjoy your special day!
+                Made with loads of love, unforgettable memories, countless wizarding wishes, and a little spark of genuine wand magic. Enjoy your special day!
               </p>
             </footer>
           </div>
